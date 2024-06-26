@@ -1,0 +1,172 @@
+body {
+    background-color: #808080; /* Gray background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    display: none; /* Hide the header by default */
+    background-color: #5A5A5A; /* Darker gray color */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .profile-image,
+.header .social-icons,
+.header-nav {
+    display: none; /* Hide in larger screens */
+}
+
+.header .social-icons {
+    margin-bottom: 10px;
+}
+
+.header-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-nav li {
+    margin: 0 10px;
+}
+
+.header-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #5A5A5A; /* Darker gray color */
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: 100vh;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* For Firefox */
+.sidebar {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.profile-image img {
+    width: 80%; /* Smaller profile image */
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 20px 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 270px; /* Width of the sidebar + padding */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 270px); /* Full width minus the width of the sidebar */
+    overflow: auto;
+}
+
+hr {
+    background-color: black;
+    color: black;
+    border-color: black;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .header {
+        display: flex; /* Show header on small screens */
+    }
+
+    .header .profile-image,
+    .header .social-icons,
+    .header-nav {
+        display: flex; /* Show in smaller screens */
+    }
+
+    .profile-image img {
+        width: 100px; /* Smaller profile image in header */
+        margin-left: 0px;
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Adjust icon size in header */
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header-nav ul {
+        flex-direction: row; /* Align nav links in a row */
+    }
+
+    .header-nav ul li {
+        margin: 0 5px;
+        font-size: x-small; /* Adjust spacing between nav links */
+    }
+}
