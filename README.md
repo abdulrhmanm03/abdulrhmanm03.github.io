@@ -3,4 +3,4 @@
 
 My personal website 
 
-check https://abdulrhmanm03.github.io/
+Check out https://abdulrhmanm03.github.io/
