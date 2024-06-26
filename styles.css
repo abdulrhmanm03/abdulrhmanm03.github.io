@@ -167,6 +167,6 @@ section h2 {
 
     .header-nav ul li {
         margin: 0 5px;
-        font-size: x-small; /* Adjust spacing between nav links */
+        font-size: medium; /* Adjust spacing between nav links */
     }
 }
